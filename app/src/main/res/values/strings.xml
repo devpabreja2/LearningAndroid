@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LearningAndroid</string>
+    <string name="choose">Choose</string>
+    <string name="bodypartselect">Select the Body Part For Workout</string>
+    <string name="welcomeapp">Welcome to the App</string>
+    <string name="enter">Enter</string>
+    <string name="textview">TextView</string>
+    <string name="opencamera">Open Camera to view Posture</string>
+
+    <string-array name="workout_types">
+        <item>Chest</item>
+        <item>Biceps</item>
+        <item>Triceps</item>
+        <item>Shoulder</item>
+    </string-array>
+</resources>
