@@ -11,8 +11,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
+
+//Exercise Activity Class to provide information about the exercise
 public class ExerciseActivity extends AppCompatActivity {
 
+    // Instance of Workout Expert Class
     private WorkoutExpert expert = new WorkoutExpert();
 
     @Override
@@ -20,6 +23,7 @@ public class ExerciseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise);
 
+        //To get selected item from the spinner
         Bundle data = getIntent().getExtras();
 
         if(data == null) {
@@ -28,6 +32,7 @@ public class ExerciseActivity extends AppCompatActivity {
 
         String workout = data.getString("message");
 
+        //Change the value of textview with the exercise
         final TextView text = (TextView) findViewById(R.id.textView3);
 
         List<String> workoutList = expert.getWorkouts(workout);
@@ -39,9 +44,13 @@ public class ExerciseActivity extends AppCompatActivity {
         }
         text.setText(workoutsFormatted);
 
-        final ImageView image = (ImageView) findViewById(R.id.imageView);
 
+        //Find the name of the image file
         String workoutName = workoutList.get(0).replaceAll("\\s","").toLowerCase();
+
+
+        //To show the image for each of the exercise
+        final ImageView image = (ImageView) findViewById(R.id.imageView);
 
         String uri = "@drawable/" + workoutName;
 
@@ -52,6 +61,7 @@ public class ExerciseActivity extends AppCompatActivity {
         image.setImageDrawable(res);
     }
 
+    //function invoked onclick of the camera button
     public void onClickCamera(View view) {
 
         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+
+//Main Activity Class which logs all the callbacks of Activity Lifecycle
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MyMessage";
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate");
     }
 
+    // Function invoked on the onclick of the button
     public void onclick(View view) {
         Intent intent = new Intent(this, WorkoutActivity.class);
         startActivity(intent);

@@ -3,6 +3,7 @@ package com.example.learningandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+//Workout Expect class which provides workouts for different body parts
 public class WorkoutExpert {
 
     List<String> getWorkouts(String workouttypes) {
